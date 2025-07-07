@@ -28,5 +28,6 @@ def insert_into_database(chunk, db_path):
                             VALUES (?, ?, ?, ?, ?, ?)""",
                              chunk.to_records(index=False))
             logger.info(f"Inserted {len(chunk)} records into table {TABLE_NAME}")
+            logger.info(f"Inserted these chunks into table {TABLE_NAME} \n {chunk} \n ")
         except Exception as e:
             logger.error(f"Failed to insert {len(chunk)} records into {TABLE_NAME}: {e}")

@@ -16,11 +16,11 @@ pip install -r advanced_infra/requirements.txt
 
 To execute the code, run the command as mentioned below from the root directory (in csv-etl directory)
 
-```
- python -m advanced_infra.main --input_csv csv_file_path --
+```bash
+ python -m advanced_infra.main --input_csv csv_file_path --chunk_size 100 --db_path transaction.db
 ```
 
-for example if the css file name is sample.csv and it's location is /home/ubuntu/sample.csv, then run the below command
+for example if the csv file name is sample.csv and it's location is /home/ubuntu/sample.csv, then run the below command
 
 ```bash
 python -m advanced_infra.main --input_csv /home/ubuntu/sample.csv
@@ -36,3 +36,6 @@ To execute the testcases, run the command as mentioned below from the root direc
  pytest advanced_infra/tests.py
 ```
 
+
+
+I have provided a sample csv file (sample_transactions.csv) in the root directory for your reference
